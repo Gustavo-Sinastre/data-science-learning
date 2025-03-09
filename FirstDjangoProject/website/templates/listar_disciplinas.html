@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de disciplinas</title>
+</head>
+<body>
+    <h1>Listar disciplinas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Código</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for disciplina in disciplinas %}
+                <tr>
+                    <td>{{ disciplina.nome }}</td>
+                    <td>{{ disciplina.codigo }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'cadastrar_disciplina' %}">Cadastrar</a>
+</body>
+</html>

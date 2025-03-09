@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Disciplina</title>
+</head>
+<body>
+    <h1>Cadastrar Disciplina</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cadastrar</button>
+        <a href="{% url 'listar_disciplinas' %}">Voltar para listar disciplinas</a>
+    </form>
+</body>
+</html>
